@@ -34,3 +34,12 @@ CREATE TABLE Status_Personagem(
    IdClasse INT FOREIGN KEY REFERENCES Classe(Id_Classe)
 );
 GO
+
+CREATE TABLE Personagens(
+   IdPersonagem INT PRIMARY KEY IDENTITY (1,1),
+   Id_Classe INT FOREIGN KEY REFERENCES Classe(Id_Classe),
+   Nome_Personagem VARCHAR(30) NOT NULL UNIQUE,
+   Data_Criacao DATE NOT NULL,
+   Data_Atualizacao DATE NOT NULL
+);
+GO
