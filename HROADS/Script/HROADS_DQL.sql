@@ -16,7 +16,7 @@ GO
 
 SELECT Id_Habilidade
 FROM Habilidade
-ORDEM BY Id_Habilidade ASC;
+ORDER BY Id_Habilidade ASC;
 GO
 
 SELECT * FROM Tipo_Habilidade;

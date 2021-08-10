@@ -40,3 +40,8 @@ WHERE IdPersonagem = 3;
 UPDATE Classe
 SET Nome_Classe = 'Necromancer'
 WHERE Id_Classe = 7;
+
+
+UPDATE Status_Personagem
+SET IdClasse = 4
+WHERE Id_Status = 7;
