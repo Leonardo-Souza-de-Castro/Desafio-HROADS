@@ -43,3 +43,9 @@ CREATE TABLE Personagens(
    Data_Atualizacao DATE NOT NULL
 );
 GO
+
+ALTER TABLE Habilidade ALTER COLUMN Descricao_Habilidade VARCHAR (150);
+GO
+
+ALTER TABLE  Classe ALTER COLUMN Descricao_Classe VARCHAR (150);
+GO
