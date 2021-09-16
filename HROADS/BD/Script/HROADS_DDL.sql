@@ -1,0 +1,59 @@
+CREATE DATABASE SENAI_HROADS_MANHA;
+GO
+
+USE SENAI_HROADS_MANHA;
+GO
+
+CREATE TABLE TiposHabilidades(
+    IdTipo INT PRIMARY KEY IDENTITY (1,1),
+	TipoHabilidade VARCHAR(10) NOT NULL
+);
+GO
+
+CREATE TABLE Habilidades(
+    IdHabilidade INT PRIMARY KEY IDENTITY (1,1),
+	IdTipo INT FOREIGN KEY REFERENCES TiposHabilidades(IdTipo),
+	NomeHabilidade VARCHAR(25) NOT NULL UNIQUE,
+	DescricaoHabilidade  VARCHAR(120) NOT NULL UNIQUE,
+);
+GO
+
+
+CREATE TABLE Classes(
+    IdClasse INT PRIMARY KEY IDENTITY (1,1),
+	NomeClasse VARCHAR(20) NOT NULL UNIQUE,
+	DescricaoClasse VARCHAR(200) NOT NULL UNIQUE,
+	Vida TINYINT NOT NULL,
+	Mana  TINYINT NOT NULL
+);
+GO
+
+CREATE TABLE StatusPersonagens(
+   IdStatus INT PRIMARY KEY IDENTITY (1,1),
+   IdHabilidade INT FOREIGN KEY REFERENCES Habilidades(IdHabilidade),
+   IdClasse INT FOREIGN KEY REFERENCES Classes(IdClasse)
+);
+GO
+
+CREATE TABLE Personagens(
+   IdPersonagem INT PRIMARY KEY IDENTITY (1,1),
+   IdClasse INT FOREIGN KEY REFERENCES Classes(IdClasse),
+   NomePersonagem VARCHAR(30) NOT NULL UNIQUE,
+   DataCriacao DATE NOT NULL,
+   DataAtualizacao DATE NOT NULL
+);
+GO
+
+CREATE TABLE TiposUsuarios(
+   IdTipoUsuario INT PRIMARY KEY IDENTITY (1,1),
+   Titulo VARCHAR(30) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE Usuarios(
+   IdUsuario INT PRIMARY KEY IDENTITY (1,1),
+   IdTipoUsuario INT FOREIGN KEY REFERENCES TiposUsuarios(IdTipoUsuario),
+   NomeUsuario VARCHAR(50) NOT NULL,
+   Email VARCHAR(30) NOT NULL UNIQUE,
+   Senha VARCHAR(30) NOT NULL
+);
