@@ -50,6 +50,6 @@ RIGHT JOIN Habilidade
 ON Status_Personagem.Id_Habilidade = Habilidade.Id_Habilidade;
 GO
 
-SELECT count(Nome_Habilidade) 
+SELECT count(Nome_Habilidade) As [Quantidade de habilidades cadastradas]
 FROM Habilidade;
 GO
