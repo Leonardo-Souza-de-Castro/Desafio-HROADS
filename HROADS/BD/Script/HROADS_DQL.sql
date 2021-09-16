@@ -4,52 +4,52 @@ GO
 SELECT * FROM Personagens;
 GO
 
-SELECT * FROM Classe;
+SELECT * FROM Classes;
 GO
 
-SELECT Nome_Classe
-FROM Classe;
+SELECT NomeClasse
+FROM Classes;
 GO
 
-SELECT * FROM Habilidade;
+SELECT * FROM Habilidades;
 GO
 
-SELECT Id_Habilidade
-FROM Habilidade
-ORDER BY Id_Habilidade ASC;
+SELECT IdHabilidade
+FROM Habilidades
+ORDER BY IdHabilidade ASC;
 GO
 
-SELECT * FROM Tipo_Habilidade;
+SELECT * FROM TiposHabilidades;
 GO
 
-SELECT Nome_Habilidade AS Habilidade, Tipo_Habilidade AS Tipo
-FROM Tipo_Habilidade
-RIGHT JOIN Habilidade
-ON Habilidade.IdTipo = Tipo_Habilidade.IdTipo;
+SELECT NomeHabilidade AS Habilidade, TipoHabilidade AS Tipo
+FROM TiposHabilidades
+RIGHT JOIN Habilidades
+ON Habilidades.IdTipo = TiposHabilidades.IdTipo;
 GO
 
-SELECT Nome_Personagem Personagem, Nome_Classe Classe, Vida, Mana
+SELECT NomePersonagem Personagem, NomeClasse Classe, Vida, Mana
 FROM Personagens
-INNER JOIN Classe
-ON Personagens.Id_Classe = Classe.Id_Classe;
+INNER JOIN Classes
+ON Personagens.IdClasse = Classes.IdClasse;
 GO
 
-SELECT Nome_Classe Classe, Nome_Habilidade Habilidades
-FROM Classe
-LEFT JOIN Status_Personagem
-ON Classe.Id_Classe = Status_Personagem.IdClasse
-LEFT JOIN Habilidade
-ON Status_Personagem.Id_Habilidade = Habilidade.Id_Habilidade;
+SELECT NomeClasse Classe, NomeHabilidade Habilidades
+FROM Classes
+LEFT JOIN StatusPersonagens
+ON Classes.IdClasse = StatusPersonagens.IdClasse
+LEFT JOIN Habilidades
+ON StatusPersonagens.IdHabilidade = Habilidades.IdHabilidade;
 GO
 
-SELECT Nome_Habilidade Habilidades, Nome_Classe Classe
-FROM Classe
-LEFT JOIN Status_Personagem
-ON Classe.Id_Classe = Status_Personagem.IdClasse
-RIGHT JOIN Habilidade
-ON Status_Personagem.Id_Habilidade = Habilidade.Id_Habilidade;
+SELECT NomeHabilidade Habilidades, NomeClasse Classe
+FROM Classes
+LEFT JOIN StatusPersonagens
+ON Classes.IdClasse = StatusPersonagens.IdClasse
+RIGHT JOIN Habilidades
+ON StatusPersonagens.IdHabilidade = Habilidades.IdHabilidade;
 GO
 
-SELECT count(Nome_Habilidade) 
-FROM Habilidade;
+SELECT count(NomeHabilidade) 
+FROM Habilidades;
 GO
