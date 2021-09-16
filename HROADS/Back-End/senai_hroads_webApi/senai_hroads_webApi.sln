@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "senai_hroads_webApi", "senai_hroads_webApi\senai_hroads_webApi.csproj", "{D8BA2180-8605-48F6-A1BD-A734F43190FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8BA2180-8605-48F6-A1BD-A734F43190FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BA2180-8605-48F6-A1BD-A734F43190FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BA2180-8605-48F6-A1BD-A734F43190FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BA2180-8605-48F6-A1BD-A734F43190FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4E55596-D102-4DC2-83BA-8CDD64593711}
+	EndGlobalSection
+EndGlobal
