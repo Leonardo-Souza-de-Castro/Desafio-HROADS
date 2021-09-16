@@ -35,13 +35,13 @@ namespace senai_hroads_webApi
 
                         ValidateLifetime = true,
 
-                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("jogos-inlock-chave-autenticar")),
+                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("jogo-hroads-chave-autenticar")),
 
                         ClockSkew = TimeSpan.FromHours(5),
 
-                        ValidIssuer = "inlock.webApi",
+                        ValidIssuer = "hroads.webApi",
 
-                        ValidAudience = "inlock.webApi"
+                        ValidAudience = "hroads.webApi"
                     };
                 });
 
@@ -49,7 +49,7 @@ namespace senai_hroads_webApi
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "inlock.webApi",
+                    Title = "hroads.webApi",
                 });
             }); ;
         }
@@ -68,7 +68,7 @@ namespace senai_hroads_webApi
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "senai.inlock.webApi");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "senai_hroads_webApi");
                 c.RoutePrefix = string.Empty;
             });
 
