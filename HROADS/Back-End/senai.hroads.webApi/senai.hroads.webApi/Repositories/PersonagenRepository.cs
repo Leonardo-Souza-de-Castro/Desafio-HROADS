@@ -16,9 +16,9 @@ namespace senai.hroads.webApi.Repositories
         {
             Personagen PersonagenBuscado = Buscar(id);
 
-            if (PersonagenBuscado != null)
+            if (PersonagenBuscado.NomePersonagem != null)
             {
-                PersonagenBuscado = PersonagemAtualizado;
+                PersonagenBuscado.NomePersonagem = PersonagemAtualizado.NomePersonagem;
             }
 
             ctx.Personagens.Update(PersonagenBuscado);
