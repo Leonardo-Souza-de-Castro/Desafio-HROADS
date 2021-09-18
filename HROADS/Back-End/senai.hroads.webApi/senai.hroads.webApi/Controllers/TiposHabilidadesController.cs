@@ -46,6 +46,7 @@ namespace senai.hroads.webApi.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{Id}")]
         public IActionResult Atualizar(int Id, TiposHabilidade TipoHabilidadeAtualizado)
         {
@@ -54,6 +55,7 @@ namespace senai.hroads.webApi.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{Id}")]
         public IActionResult Deletar(int Id)
         {

@@ -26,19 +26,20 @@ namespace senai.hroads.webApi.Controllers
             _UsuarioRepository = new UsuarioRepository();
         }
 
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult ListarTodos()
         {
             return Ok(_UsuarioRepository.ListarTodos());
         }
 
+        [Authorize(Roles = "1")]
         [HttpGet("{Id}")]
         public IActionResult BuscarPorId(int Id)
         {
             return Ok(_UsuarioRepository.BuscarPorId(Id));
         }
 
-        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Usuario NovoUsuario)
         {
@@ -46,8 +47,8 @@ namespace senai.hroads.webApi.Controllers
 
             return StatusCode(201);
         }
-        
 
+        [Authorize(Roles = "1")]
         [HttpPut("{Id}")]
         public IActionResult Atualizar(int Id, Usuario UsuarioAtualizado)
         {
@@ -56,6 +57,7 @@ namespace senai.hroads.webApi.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{Id}")]
         public IActionResult Deletar(int Id)
         {

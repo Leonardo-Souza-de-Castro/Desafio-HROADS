@@ -11,6 +11,7 @@ namespace senai.hroads.webApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
+    [Authorize(Roles = "1")]
     public class TiposUsuariosController : ControllerBase
     {
         private ITipoUsuarioRepository _TiposUsuariosRepository { get; set; }
@@ -32,7 +33,6 @@ namespace senai.hroads.webApi.Controllers
             return Ok(_TiposUsuariosRepository.BuscarPorId(Id));
         }
 
-        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(TiposUsuario NovoTipoUsuario)
         {
