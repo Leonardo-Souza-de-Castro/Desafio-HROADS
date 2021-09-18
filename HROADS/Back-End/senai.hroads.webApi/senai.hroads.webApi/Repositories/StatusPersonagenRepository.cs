@@ -1,4 +1,5 @@
-﻿using senai.hroads.webApi.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using senai.hroads.webApi.Contexts;
 using senai.hroads.webApi.Domains;
 using senai.hroads.webApi.Interfaces;
 using System;
@@ -56,7 +57,7 @@ namespace senai.hroads.webApi.Repositories
 
         public List<StatusPersonagen> Listar()
         {
-            return ctx.StatusPersonagens.ToList();
+            return ctx.StatusPersonagens.Include(S => S.IdHabilidade).Include(S => S.IdClasse).ToList();
         }
     }
 }
