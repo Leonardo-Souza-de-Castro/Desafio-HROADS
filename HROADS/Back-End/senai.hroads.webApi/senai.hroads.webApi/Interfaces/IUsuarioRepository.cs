@@ -5,6 +5,8 @@ namespace senai.hroads.webApi.Interfaces
 {
     interface IUsuarioRepository
     {
+        Usuario BuscarPorEmailSenha(string Email, string Senha);
+
         List<Usuario> ListarTodos();
 
         Usuario BuscarPorId(int IdUsuario);

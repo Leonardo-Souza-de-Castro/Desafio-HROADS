@@ -1,10 +1,8 @@
 ﻿using senai.hroads.webApi.Contexts;
 using senai.hroads.webApi.Domains;
 using senai.hroads.webApi.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace senai.hroads.webApi.Repositories
 {
@@ -43,6 +41,11 @@ namespace senai.hroads.webApi.Repositories
             Ctx.SaveChanges();
         }
 
+        public Usuario BuscarPorEmailSenha(string Email, string Senha)
+        {
+                return Ctx.Usuarios.FirstOrDefault(e => e.Email == Email && e.Senha == Senha);
+        }
+
         public Usuario BuscarPorId(int IdUsuario)
         {
             // Retorna o primeiro usuário encontrado  para o Id informado
@@ -69,6 +72,11 @@ namespace senai.hroads.webApi.Repositories
         public List<Usuario> ListarTodos()
         {
             return Ctx.Usuarios.ToList();
+        }
+
+        public Usuario Login (string Email, string Senha) 
+        {
+            return Ctx.Usuarios.FirstOrDefault(e => e.Email == Email && e.Senha == Senha);
         }
     }
 }
