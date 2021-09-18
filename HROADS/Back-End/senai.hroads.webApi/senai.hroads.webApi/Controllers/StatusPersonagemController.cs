@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.hroads.webApi.Domains;
 using senai.hroads.webApi.Interfaces;
@@ -13,6 +14,7 @@ namespace senai.hroads.webApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "1")]
     public class StatusPersonagemController : ControllerBase
     {
         private IStatusPersonagenRepository _StatusPersonagem { get; set; }

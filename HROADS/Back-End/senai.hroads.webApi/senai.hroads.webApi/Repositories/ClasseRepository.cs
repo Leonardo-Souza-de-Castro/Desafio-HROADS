@@ -15,9 +15,21 @@ namespace senai.hroads.webApi.Repositories
         {
             Classe ClasseBuscada = Buscar(id);
 
-            if (ClasseBuscada != null)
+            if (ClasseBuscada.DescricaoClasse != null)
             {
-                ClasseBuscada = ClasseAtualizada;
+                ClasseBuscada.DescricaoClasse = ClasseAtualizada.DescricaoClasse;
+            }
+            else if (ClasseBuscada.NomeClasse != null)
+            {
+                ClasseBuscada.NomeClasse = ClasseAtualizada.NomeClasse;
+            }
+            else if (ClasseBuscada.Mana != 0)
+            {
+                ClasseBuscada.Mana = ClasseAtualizada.Mana;
+            }
+            else if (ClasseBuscada.Vida != 0)
+            {
+                ClasseBuscada.Vida = ClasseAtualizada.Vida;
             }
 
             ctx.Classes.Update(ClasseBuscada);

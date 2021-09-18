@@ -16,9 +16,13 @@ namespace senai.hroads.webApi.Repositories
         {
             StatusPersonagen StatusBuscado = Buscar(id);
 
-            if (StatusBuscado != null)
+            if (StatusBuscado.IdClasse != null)
             {
-                StatusBuscado = StatusAtualizado;
+                StatusBuscado.IdClasse = StatusAtualizado.IdClasse;
+            }
+            else if (StatusBuscado.IdHabilidade != null)
+            {
+                StatusBuscado.IdHabilidade = StatusAtualizado.IdHabilidade;
             }
 
             ctx.StatusPersonagens.Update(StatusBuscado);

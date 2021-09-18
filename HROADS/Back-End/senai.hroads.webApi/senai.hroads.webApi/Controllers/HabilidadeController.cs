@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.hroads.webApi.Domains;
 using senai.hroads.webApi.Interfaces;
@@ -34,6 +35,7 @@ namespace senai.hroads.webApi.Controllers
             return Ok(_HabiliadeRepository.Buscar(id));
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Habilidade HabiliadeNova)
         {
@@ -41,6 +43,7 @@ namespace senai.hroads.webApi.Controllers
             return StatusCode(201);
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Habilidade HabilidadeAtualizada)
         {
@@ -49,6 +52,7 @@ namespace senai.hroads.webApi.Controllers
             return StatusCode(204);
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {

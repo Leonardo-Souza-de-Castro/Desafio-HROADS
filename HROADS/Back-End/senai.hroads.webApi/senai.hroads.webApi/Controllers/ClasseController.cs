@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.hroads.webApi.Domains;
 using senai.hroads.webApi.Interfaces;
@@ -22,6 +23,7 @@ namespace senai.hroads.webApi.Controllers
             _ClasseRepository = new ClasseRepository();
         }
 
+        
         [HttpGet]
         public IActionResult Listar()
         {
@@ -34,6 +36,7 @@ namespace senai.hroads.webApi.Controllers
             return Ok(_ClasseRepository.Buscar(id));
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Classe ClasseNova)
         {
@@ -42,6 +45,7 @@ namespace senai.hroads.webApi.Controllers
             return StatusCode(201);
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Classe ClasseAtualizada)
         {
@@ -50,6 +54,7 @@ namespace senai.hroads.webApi.Controllers
             return StatusCode(204);
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete ("{id}")]
         public IActionResult Deletar(int id)
         {
