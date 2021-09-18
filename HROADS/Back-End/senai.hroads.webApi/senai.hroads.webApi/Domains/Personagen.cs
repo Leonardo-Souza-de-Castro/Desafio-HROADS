@@ -13,6 +13,6 @@ namespace senai.hroads.webApi.Domains
         public DateTime DataCriacao { get; set; }
         public DateTime DataAtualizacao { get; set; }
 
-        public virtual Class IdClasseNavigation { get; set; }
+        public virtual Classe IdClasseNavigation { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace senai.hroads.webApi.Contexts
         {
         }
 
-        public virtual DbSet<Class> Classes { get; set; }
+        public virtual DbSet<Classe> Classes { get; set; }
         public virtual DbSet<Habilidade> Habilidades { get; set; }
         public virtual DbSet<Personagen> Personagens { get; set; }
         public virtual DbSet<StatusPersonagen> StatusPersonagens { get; set; }
@@ -39,7 +39,7 @@ namespace senai.hroads.webApi.Contexts
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Latin1_General_CI_AS");
 
-            modelBuilder.Entity<Class>(entity =>
+            modelBuilder.Entity<Classe>(entity =>
             {
                 entity.HasKey(e => e.IdClasse)
                     .HasName("PK__Classes__0652AF798A42EB4C");
