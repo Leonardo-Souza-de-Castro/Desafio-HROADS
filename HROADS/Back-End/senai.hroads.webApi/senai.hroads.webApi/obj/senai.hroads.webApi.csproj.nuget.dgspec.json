@@ -1,6 +1,22 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\livia\\OneDrive\\Documents\\Lívia\\Lívia Escola\\SENAI\\2021-2-DM_LIVIA\\sprint-2-back-end\\Desafio-HROADS\\HROADS\\Back-End\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\livia\\OneDrive\\Documents\\Lívia\\Lívia Escola\\SENAI\\2021-2-DM_LIVIA\\sprint-2-back-end\\Desafio-HROADS\\HROADS\\Back-End\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\livia\\OneDrive\\Documents\\Lívia\\Lívia Escola\\SENAI\\2021-2-DM_LIVIA\\sprint-2-back-end\\Desafio-HROADS\\HROADS\\Back-End\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
+        "projectName": "senai.hroads.webApi",
+        "projectPath": "C:\\Users\\livia\\OneDrive\\Documents\\Lívia\\Lívia Escola\\SENAI\\2021-2-DM_LIVIA\\sprint-2-back-end\\Desafio-HROADS\\HROADS\\Back-End\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
+        "packagesPath": "C:\\Users\\livia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\livia\\OneDrive\\Documents\\Lívia\\Lívia Escola\\SENAI\\2021-2-DM_LIVIA\\sprint-2-back-end\\Desafio-HROADS\\HROADS\\Back-End\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\livia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
     "C:\\Users\\guilherme_2\\Documents\\trabalhos do leo\\Senai\\Desafio-HROADS\\HROADS\\Back-End\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {}
   },
   "projects": {
@@ -15,6 +31,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\guilherme_2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 149fbb259de45aa0934622a8420fbd7a43284407
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
