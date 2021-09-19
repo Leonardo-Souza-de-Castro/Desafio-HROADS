@@ -58,7 +58,7 @@ namespace senai.hroads.webApi.Repositories
 
         public List<Habilidade> Listar()
         {
-            return ctx.Habilidades.Include(H => H.IdTipo).ToList();
+            return ctx.Habilidades.Include(H => H.IdTipoNavigation).ToList();
         }
     }
 }

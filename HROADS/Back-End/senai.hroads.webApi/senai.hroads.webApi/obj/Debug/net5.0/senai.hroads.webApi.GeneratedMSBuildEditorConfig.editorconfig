@@ -7,8 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = senai.hroads.webApi
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\livia\OneDrive\Documents\Lívia\Lívia Escola\SENAI\2021-2-DM_LIVIA\sprint-2-back-end\Desafio-HROADS\HROADS\Back-End\senai.hroads.webApi\senai.hroads.webApi\
-=======
 build_property.ProjectDir = C:\Users\guilherme_2\Documents\trabalhos do leo\Senai\Desafio-HROADS\HROADS\Back-End\senai.hroads.webApi\senai.hroads.webApi\
->>>>>>> 149fbb259de45aa0934622a8420fbd7a43284407

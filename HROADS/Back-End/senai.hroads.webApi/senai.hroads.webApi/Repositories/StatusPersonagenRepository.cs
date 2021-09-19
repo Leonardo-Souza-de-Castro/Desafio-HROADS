@@ -57,7 +57,7 @@ namespace senai.hroads.webApi.Repositories
 
         public List<StatusPersonagen> Listar()
         {
-            return ctx.StatusPersonagens.Include(S => S.IdHabilidade).Include(S => S.IdClasse).ToList();
+            return ctx.StatusPersonagens.Include(S => S.IdHabilidadeNavigation).Include(S => S.IdClasseNavigation).ToList();
         }
     }
 }
