@@ -30,7 +30,11 @@ namespace senai.hroads.webApi.Controllers
         [HttpGet]
         public IActionResult ListarTodos()
         {
-            return Ok(_UsuarioRepository.ListarTodos());
+            List<Usuario> lista = _UsuarioRepository.ListarTodos();
+
+            var newList = lista.Select(l => new {l.Email, l.NomeUsuario, l.IdTipoUsuarioNavigation.Titulo}).ToList();
+
+            return Ok(newList); ;
         }
 
         [Authorize(Roles = "1")]
