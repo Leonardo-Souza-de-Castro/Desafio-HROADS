@@ -30,6 +30,15 @@ namespace senai.hroads.webApi.Controllers
             return Ok(_PersonagenRepository.Listar());
         }
 
+        /*
+        [Authorize (Roles = "1")]
+        [HttpGet ("jogador")]
+        public IActionResult ListarComJogador()
+        {
+            return Ok(_PersonagenRepository.ListarComJogador());
+        }
+        */
+
         [Authorize]
         [HttpGet("{id}")]
         public IActionResult Buscar(int id)

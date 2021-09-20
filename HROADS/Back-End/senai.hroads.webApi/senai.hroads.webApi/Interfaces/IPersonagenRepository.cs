@@ -10,6 +10,8 @@ namespace senai.hroads.webApi.Interfaces
     {
         List<Personagen> Listar();
 
+        //List<Personagen> ListarComJogador();
+
         Personagen Buscar(int id);
 
         void Deletar(int id);
