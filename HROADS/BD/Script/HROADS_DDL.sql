@@ -35,15 +35,6 @@ CREATE TABLE StatusPersonagens(
 );
 GO
 
-CREATE TABLE Personagens(
-   IdPersonagem INT PRIMARY KEY IDENTITY (1,1),
-   IdClasse INT FOREIGN KEY REFERENCES Classes(IdClasse),
-   NomePersonagem VARCHAR(30) NOT NULL UNIQUE,
-   DataCriacao DATE NOT NULL,
-   DataAtualizacao DATE NOT NULL
-);
-GO
-
 CREATE TABLE TiposUsuarios(
    IdTipoUsuario INT PRIMARY KEY IDENTITY (1,1),
    Titulo VARCHAR(30) NOT NULL UNIQUE
@@ -57,3 +48,13 @@ CREATE TABLE Usuarios(
    Email VARCHAR(30) NOT NULL UNIQUE,
    Senha VARCHAR(30) NOT NULL
 );
+
+CREATE TABLE Personagens(
+	IdUsuario INT FOREIGN KEY REFERENCES Usuarios(IdUsuario),
+   IdPersonagem INT PRIMARY KEY IDENTITY (1,1),
+   IdClasse INT FOREIGN KEY REFERENCES Classes(IdClasse),
+   NomePersonagem VARCHAR(30) NOT NULL UNIQUE,
+   DataCriacao DATE NOT NULL,
+   DataAtualizacao DATE NOT NULL
+);
+GO

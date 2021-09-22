@@ -54,11 +54,11 @@ namespace senai.hroads.webApi.Repositories
             return ctx.Personagens.Include(p => p.IdClasseNavigation).OrderBy(C => C.IdClasseNavigation.NomeClasse).ToList();
         }
 
-        /* public List<Personagen> ListarComJogador()
-        {
-            return ctx.Personagens.Include(p => p.IdUsuarioNavigation).ToList();
-        }
+        // public List<Personagen> ListarComJogador()
+        //{
+          //  return ctx.Personagens.Include(p => p.IdClasseNavigation).ToList();
+        //}
 
-        */
+        
     }
 }

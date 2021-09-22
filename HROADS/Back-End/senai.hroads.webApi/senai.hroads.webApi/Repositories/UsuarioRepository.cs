@@ -72,7 +72,16 @@ namespace senai.hroads.webApi.Repositories
 
         public List<Usuario> ListarTodos()
         {
-            return Ctx.Usuarios.Include(U => U.IdTipoUsuarioNavigation).ToList();
+            return Ctx.Usuarios
+                .Select(u => new Usuario(){ 
+                    Email = u.Email, 
+                    NomeUsuario = u.NomeUsuario, 
+                    IdTipoUsuarioNavigation = new TiposUsuario()
+                    {
+                        Titulo = u.IdTipoUsuarioNavigation.Titulo
+                    }
+                })
+                .ToList();
         }
 
         public Usuario Login (string Email, string Senha) 
